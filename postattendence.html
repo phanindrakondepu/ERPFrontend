@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Post Attendance</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #FFDAB9 0%, #E6E6FA 100%);
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            width: 40%;
+            background-color: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+            animation: fadeIn 1.5s ease-in-out;
+        }
+
+        h2 {
+            text-align: center;
+            font-size: 28px;
+            color: #FF4500;
+            animation: slideDown 1.5s ease;
+            margin-bottom: 20px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            font-size: 18px;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        input, select {
+            padding: 12px;
+            font-size: 16px;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+            margin-bottom: 20px;
+            transition: box-shadow 0.3s ease;
+        }
+
+        input:focus, select:focus {
+            outline: none;
+            box-shadow: 0 0 8px rgba(255, 69, 0, 0.5);
+        }
+
+        button {
+            padding: 12px;
+            background-color: #FF4500;
+            color: white;
+            font-size: 18px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #C0392B;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+                transform: translateY(-100%);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2>Post Attendance</h2>
+        <form>
+            <label for="course">Course:</label>
+            <select id="course" name="course" required>
+                <option value="" disabled selected>Select Course</option>
+                <option value="JFSD">JFSD</option>
+                <option value="PFSD">PFSD</option>
+                <option value="MSWD">MSWD</option>
+            </select>
+
+            <label for="date">Date:</label>
+            <input type="date" id="date" name="date" required>
+
+            <label for="attendanceStatus">Attendance Status:</label>
+            <select id="attendanceStatus" name="attendanceStatus" required>
+                <option value="" disabled selected>Select Status</option>
+                <option value="present">Present</option>
+                <option value="absent">Absent</option>
+            </select>
+
+            <label for="comments">Comments:</label>
+            <input type="text" id="comments" name="comments" placeholder="Enter any comments (optional)">
+
+            <button type="submit">Submit Attendance</button>
+        </form>
+    </div>
+
+</body>
+</html>

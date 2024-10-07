@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Navbar</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            height: 100vh;
+        }
+
+        /* Sidebar */
+        .sidebar {
+            background-color: #333;
+            color: white;
+            width: 250px;
+            height: 100vh;
+            padding-top: 20px;
+            position: fixed;
+            left: 0;
+            top: 0;
+            box-shadow: 5px 0 15px rgba(0, 0, 0, 0.2);
+            z-index: 10;
+        }
+        .sidebar h2 {
+            text-align: center;
+            color: #ff6b6b;
+            margin-bottom: 20px;
+            font-size: 24px;
+        }
+        .sidebar a {
+            display: block;
+            padding: 15px;
+            font-size: 18px;
+            color: white;
+            text-decoration: none;
+            transition: background-color 0.3s, padding-left 0.3s;
+            border-radius: 5px;
+        }
+        .sidebar a:hover {
+            background-color: #ff6b6b;
+            padding-left: 30px;
+            box-shadow: inset 5px 0 10px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Content Area */
+        .content {
+            margin-left: 250px;
+            padding: 20px;
+            flex: 1;
+        }
+        .content h1 {
+            font-size: 36px;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        /* Animations */
+        .sidebar a:hover {
+            transform: scale(1.1);
+            background-color: #ff6b6b;
+        }
+
+        /* Scrollbar */
+        .sidebar {
+            overflow-y: auto;
+        }
+
+        .fade-in {
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <h2>Student Panel</h2>
+        <a href="courses.html">Courses</a>
+        <a href="checkattendence.html">Check Attendence</a>
+        <a href="submitassignments.html">Submit Assignments</a>
+        <a href="timetable.html">Timetable</a>
+        <a href="#">Doubts</a>
+        <a href="#">Profile</a>
+    </div>
+
+    <!-- Main Content -->
+    <div class="content fade-in">
+        <h1>Welcome to the Student Dashboard</h1>
+        <p>Select an option from the sidebar to get started.</p>
+    </div>
+
+</body>
+</html>

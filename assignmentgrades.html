@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment Grades</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #D3E0EA 0%, #FFE3E3 100%);
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            width: 80%;
+            max-width: 800px;
+            background-color: white;
+            border-radius: 12px;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+            animation: fadeIn 1.5s ease-in-out;
+            padding: 20px;
+            overflow-x: auto;
+        }
+
+        h2 {
+            text-align: center;
+            font-size: 28px;
+            color: #FF6F61;
+            animation: slideDown 1.5s ease;
+            margin-bottom: 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #FF6F61;
+            color: white;
+        }
+
+        tr:hover {
+            background-color: #f1f1f1;
+            transition: background-color 0.3s;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+                transform: translateY(-100%);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2>Assignment Grades</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Assignment</th>
+                    <th>Student Name</th>
+                    <th>Grade</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Math Assignment 1</td>
+                    <td>John Doe</td>
+                    <td>A</td>
+                </tr>
+                <tr>
+                    <td>Science Project</td>
+                    <td>Jane Smith</td>
+                    <td>B+</td>
+                </tr>
+                <tr>
+                    <td>History Essay</td>
+                    <td>Emily Johnson</td>
+                    <td>A-</td>
+                </tr>
+                <tr>
+                    <td>Art Project</td>
+                    <td>Michael Brown</td>
+                    <td>B</td>
+                </tr>
+                <tr>
+                    <td>Computer Science Assignment</td>
+                    <td>Sarah Wilson</td>
+                    <td>A+</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+</body>
+</html>
